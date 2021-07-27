@@ -10,16 +10,24 @@ variable "region" {
 variable "size" {
   default = "s-1vcpu-2gb"
 }
+variable "user_data" {
+  default = null
+}
+variable "tags" {
+  default = []
+}
 # Record
 variable "zone_id" {}
 variable "record_name" {}
 
 resource "digitalocean_droplet" "main" {
-  image    = var.image
-  name     = var.droplet_name
-  region   = var.region
-  size     = var.size
-  ssh_keys = var.tf_ssh_keys
+  image     = var.image
+  name      = var.droplet_name
+  region    = var.region
+  size      = var.size
+  ssh_keys  = var.tf_ssh_keys
+  user_data = var.user_data
+  tags      = var.tags
 }
 
 resource "cloudflare_record" "main" {
