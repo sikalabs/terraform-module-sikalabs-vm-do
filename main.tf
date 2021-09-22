@@ -16,6 +16,9 @@ variable "user_data" {
 variable "tags" {
   default = []
 }
+variable "vpc_uuid" {
+  default = null
+}
 # Record
 variable "zone_id" {}
 variable "record_name" {}
@@ -28,6 +31,7 @@ resource "digitalocean_droplet" "main" {
   ssh_keys  = var.tf_ssh_keys
   user_data = var.user_data
   tags      = var.tags
+  vpc_uuid  = var.vpc_uuid
 }
 
 resource "cloudflare_record" "main" {
