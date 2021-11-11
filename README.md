@@ -1,7 +1,7 @@
-# Terraform Module Ondrej Sika's DO Droplet (+ CF Record)
+# Terraform Module sikalabs/sikalabs-vm-do
 
     Ondrej Sika <ondrej@ondrejsika.com>
-    https://github.com/ondrejsika/terraform-module-ondrejsika-do-droplet
+    https://github.com/sikalabs/terraform-module-sikalabs-vm-do
 
 ## Example Usage
 
