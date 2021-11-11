@@ -18,7 +18,7 @@ data "digitalocean_ssh_key" "ondrejsika" {
   name = local.ssh_key_name
 }
 
-module "ondrejsika-do-droplet-example" {
+module "vm--example" {
   source = "../."
   tf_ssh_keys = [
     data.digitalocean_ssh_key.ondrejsika.id
